@@ -1,0 +1,616 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "lato", sans-serif;
+}
+
+.navBar {
+    z-index: 1;
+    background-color: var(--secondary-color);
+    position: fixed;
+    width: 100%;
+}
+
+.navBar img {
+    position: absolute;
+    width: auto;
+    top: 2px;
+    left: 10px;
+    height: 40px;
+}
+
+.navBar ul {
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.navBar li {
+    padding: 10px;
+    list-style: none;
+}
+
+.navBar a {
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--header-color);
+}
+
+.navBar a:hover {
+    color: rgb(194, 39, 45);
+}
+
+.modeBtn label {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 1.85px;
+    right: 20px;
+    display: block;
+    background: var(--primary-color);
+    border-radius: 200px;
+    cursor: pointer;
+}
+
+.modeBtn button {
+    position: absolute;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.modeBtn i {
+    pointer-events: none;
+    position: absolute;
+    transform: scale(1.75);
+    display: none;
+}
+
+.modeBtn #moon {
+    display: inline-block;
+}
+
+.fa-moon {
+    right: 35px;
+    top: 14px;
+    color: #4a4a4a;
+}
+
+.fa-sun {
+    right: 32px;
+    top: 14px;
+    color: #ffc42f;
+}
+
+.fa-star {
+    right: 31px;
+    top: 13px;
+    color: white;
+}
+
+:root {
+    --header-color: white;
+    --header2-color: #353535;
+    --text-color: rgb(204, 204, 204);
+    --primary-color: #282828;
+    --secondary-color: #181818;
+}
+
+.dark-theme {
+    --header-color: white;
+    --header2-color: #353535;
+    --text-color: rgb(204, 204, 204);
+    --primary-color: #282828;
+    --secondary-color: #181818;
+}
+
+.dark-theme #moon {
+    display: inline-block;
+}
+
+.light-theme {
+    --header-color: black;
+    --header2-color: #cacaca;
+    --text-color: rgb(51, 51, 51);
+    --primary-color: #d7d7d7;
+    --secondary-color: #e7e7e7;
+}
+
+.light-theme #sun {
+    display: inline-block;
+}
+
+.light-theme #moon {
+    display: none;
+}
+
+.beige-theme {
+    --header-color: black;
+    --header2-color: black;
+    --text-color: black;
+    --primary-color: rgb(218, 214, 207);
+    --secondary-color: rgb(228, 225, 217);
+}
+
+.beige-theme #star {
+    display: inline-block;
+}
+
+.beige-theme #moon {
+    display: none;
+}
+
+.homePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, var(--secondary-color), var(--secondary-color), var(--primary-color));
+}
+
+.homeContainer {
+    gap: 300px;
+    margin-top: 40px;
+    width: calc(100% - 80px);
+    height: calc(100% - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail h1 {
+    color: var(--header-color);
+    font-size: 50px;
+}
+
+.detail b {
+    font-size: 30px;
+}
+
+.detail p {
+    color: var(--text-color);
+    font-size: 25px;
+}
+
+.detail a {
+    font-weight: bold;
+    font-size: large;
+    padding: 5px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    background-color: rgb(204, 204, 204);
+    border-radius: 20px;
+    border: 3px solid rgb(204, 204, 204);
+    text-decoration: none;
+}
+
+.detail a:hover {
+    color: white;
+    background-color: rgb(194, 39, 45);
+    border-color: rgb(194, 39, 45);
+}
+
+.Hexagons {
+    display: flex;
+    flex-wrap:wrap-reverse;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    height: 425px;
+    width: 425px;
+    top: -30px;
+}
+
+.hexagon3 {
+    top: 30px;
+    position: relative;
+}
+
+.hexagon {
+    background-color: rgb(204, 204, 204);
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(
+        25% 5%,
+        75% 5%,
+        100% 50%,
+        75% 95%,
+        25% 95%,
+        0% 50%
+    );
+    transform: rotate(90deg);
+}
+
+.hexagon img {
+    position: relative;
+    transform: rotate(-90deg);
+}
+
+.hcdc {
+    top: 26px;
+    left: 25px;
+    height: 150px;
+}
+
+.cet {
+    top: 15px;
+    left: 15px;
+    height: 175px;
+}
+
+.aboutPage, .contactPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--primary-color);
+}
+
+.aboutContainer {
+    width: calc(100% - 80px);
+    height: calc(100% - 120px);
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutTitle {
+    font-size: 50px;
+    font-weight: bold;
+    height: 10%;
+    width: 100%;
+}
+
+.aboutDescription {
+    color: var(--text-color);
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    text-align: justify;
+    line-height: 30px;
+    height: 30%;
+    width: 100%;
+}
+
+.skillTitle {
+    font-size: 50px;
+    font-weight: bold;
+    height: 10%;
+    width: 100%;
+}
+
+.skills {
+    height: 50%;
+    width: 100%;
+}
+
+.skills ul {
+    display: grid;
+    grid-gap: 25px;
+    padding: 25px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 110px 110px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    } to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.skills li {
+    color: var(--text-color);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.aboutTitle, .skillTitle {
+    color: var(--header-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactContainer {
+    width: calc(100% - 80px);
+    height: calc(100% - 120px);
+    margin-top: 40px;
+}
+
+.contactHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hTitle1 {
+    color: var(--header2-color);
+    font-weight: bold;
+    font-size: 120px;
+}
+
+.hTitle2 {
+    font-size: 45px;
+    margin-left: 25px;
+    color: rgb(194, 39, 45);
+    font-weight: bold;
+    position: absolute;
+}
+
+.contactBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 145px);
+}
+
+.contactAside {
+    width: 50%;
+}
+
+.aTitle1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--header-color);
+}
+
+.aBody1 {
+    color: var(--text-color);
+    padding: 10px 0;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.addresses {
+    color: var(--text-color);
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 100px;
+}
+
+.hcdcAddress, .fbAddress {
+    display: flex;
+    gap: 70px;
+    width: 48.75%;
+    align-self: center;
+}
+
+.addresses a {
+    transform: scale(5);
+    text-decoration: none;
+}
+
+.fa-envelope {
+    position: relative;
+    top: 15px;
+    color: black;
+}
+
+.fa-facebook {
+    position: relative;
+    top: 15px;
+    color: rgb(66, 103, 178);
+}
+
+@media (max-width: 599px) {
+    .homePage {
+        width: 100%;
+    }
+
+    .homeContainer {
+        gap: 0;
+        flex-direction: column-reverse;
+    }
+
+    .Hexagons {
+        top: -20px;
+    }
+    
+    .gmailAddress {
+        position: relative;
+        top: 10px;
+        width: 100px;
+    }
+
+    .fbName {
+        top: 10px;
+        position: relative;
+        width: 100px;
+    }
+
+    .contactBody {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+
+    .addresses {
+        font-size: 10px;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .addresses a {
+        transform: scale(3);
+    }
+
+    .hcdcAddress, .fbAddress {
+        gap: 20px;
+    }
+}
+
+@media (min-width: 375) and (max-width: 899px) {
+    .homePage {
+        width: 100%;
+    }
+
+    .homeContainer {
+        gap: 0;
+        flex-direction: column-reverse;
+    }
+
+    .Hexagons {
+        top: -20px;
+    }
+
+    .navBar {
+        position: fixed;
+        width: 100%;
+    }
+
+    .detail p {
+        position: relative;
+        top: -10px;
+    }
+
+    .detail a {
+        position: relative;
+        top: -10px;
+    }
+
+    .aboutTitle {
+        font-size: 40px;
+    }
+
+    .aboutDescription {
+        font-size: 15px;
+    }
+
+    .contactAside {
+        width: 100%;
+    }
+
+    .skillTitle {
+        font-size: 40px;
+    }
+
+    .skills {
+        font-size: 15px;
+    }
+
+    .gmailAddress {
+        position: relative;
+        top: 10px;
+        width: 100px;
+    }
+
+    .fbName {
+        top: 10px;
+        position: relative;
+        width: 100px;
+    }
+
+    .contactBody {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+
+    .addresses {
+        font-size: 10px;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .addresses a {
+        transform: scale(3);
+    }
+
+    .hcdcAddress, .fbAddress {
+        gap: 20px;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+    .homeContainer {
+        gap: 100px;
+    }
+    
+    .Hexagons {
+        width: 500px;
+    }
+
+    .hexagon {
+        height: 150px;
+        width: 150px;
+    }
+
+    .addresses {
+        font-size: 15px;
+        gap: 80px;
+    }
+
+    .addresses a {
+        transform: scale(3);
+        left: 40px;
+    }
+
+    .hcdcAddress, .fbAddress {
+        align-self: flex-start;
+    }
+
+    .gmailAddress {
+        position: relative;
+        top: 6px;
+    }
+
+    .fbName {
+        top: 8px;
+        position: relative;
+    }
+
+    .aTitle1 {
+        font-size: 40px;
+    }
+
+    .aBody1 {
+        font-size: 15px;
+    }
+
+    .hcdc {
+        top: 20px;
+        left: 25px;
+        height: 110px;
+    }
+    
+    .cet {
+        top: 10px;
+        left: 10px;
+        height: 135px;
+    }
+
+    .its {
+        top: -17.5px;
+        left: -17.5px;
+        height: 185px;
+    }
+}
+
+@media (min-width: 1199px) and (max-width: 1490px) {
+    .Hexagons {
+        width: 750px;
+    }
+
+    .hexagon {
+        height: 200px;
+        width: 200px;
+    }
+
+    .hexagon3 {
+        top: 25px;
+    }
+}
